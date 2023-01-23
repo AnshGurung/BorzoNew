@@ -42,7 +42,7 @@ class _SignInState extends State<SignIn> {
                     child: SizedBox(
                       height: 40,
                       child: TabBar(
-                        indicator: BoxDecoration(+
+                        indicator: BoxDecoration(
                           color: Colors.grey[200],
                           borderRadius: BorderRadius.circular(15),
                         ),
