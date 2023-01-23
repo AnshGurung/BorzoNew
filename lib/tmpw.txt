@@ -1,0 +1,55 @@
+RichText(
+                text: const TextSpan(
+                  children: [
+                    TextSpan(
+                      text: 'Log in ',
+                      RichText(
+                text: const TextSpan(
+                  children: [
+                    TextSpan(
+                      text: 'Log in ',
+                      style: TextStyle(
+                        color: Color(0xff0048ff),
+                        fontSize: 15,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    TextSpan(
+                      text: 'or ',
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    TextSpan(
+                      text: 'Sign up',
+                      style: TextStyle(
+                        color: Color(0xff0048ff),
+                        fontSize: 15,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+                    ),
+                    TextSpan(
+                      text: 'or ',
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    TextSpan(
+                      text: 'Sign up',
+                      style: TextStyle(
+                        color: Color(0xff0048ff),
+                        fontSize: 15,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
+              ),

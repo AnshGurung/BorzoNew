@@ -1,0 +1,167 @@
+itemContainer('Documents', 100),
+                itemContainer('Food', 60),
+                itemContainer('Cloth', 60),
+                itemContainer('Groceries', 85),
+                itemContainer('Flowers', 75),
+                itemContainer('Cake', 55),
+
+
+
+
+
+                BottomNavigationBar(
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.grey,
+        type: BottomNavigationBarType.fixed,
+        currentIndex: currentIndex,
+        onTap: (index) {
+          setState(() {
+            currentIndex = index;
+          });
+          onTapped(currentIndex);
+        },
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.inbox_outlined,
+            ),
+            label: 'Orders',
+          ),
+          
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.add_circle_outlined,
+            ),
+            label: 'New Orders',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.chat_outlined,
+            ),
+            label: 'Chat',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.person_outlined,
+            ),
+            label: 'Profile',
+          ),
+        ],
+      ),
+
+
+
+      const Color(0xff0048ff)
+
+
+
+       Container buildMyNavBar(BuildContext context) {
+    return Container(
+      height: 60,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: const BorderRadius.only(
+          topLeft: Radius.circular(20),
+          topRight: Radius.circular(20),
+        ),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          IconButton(
+            enableFeedback: false,
+            onPressed: () {
+              setState(() {
+                pageIndex = 0;
+              });
+            },
+            icon: pageIndex == 0
+                ? const Icon(
+                    Icons.home,
+                    color: Colors.black,
+                    size: 28,
+                  )
+                : const Icon(
+                    Icons.home_outlined,
+                    color: Colors.black,
+                    size: 28,
+                  ),
+          ),
+          IconButton(
+            enableFeedback: false,
+            onPressed: () {
+              setState(() {
+                // pageIndex = 1;
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => NewOrders()));
+              });
+            },
+            icon: pageIndex == ''
+                ? const Icon(
+                    Icons.add_circle_outline,
+                    color: Colors.black,
+                    size: 28,
+                  )
+                : const Icon(
+                    Icons.add_circle_outline,
+                    color: Colors.black,
+                    size: 28,
+                  ),
+          ),
+          IconButton(
+            enableFeedback: false,
+            onPressed: () {
+              setState(() {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Chat()));
+              });
+            },
+            icon: pageIndex == 2
+                ? const Icon(
+                    Icons.message_outlined,
+                    color: Colors.black,
+                    size: 28,
+                  )
+                : const Icon(
+                    Icons.message_outlined,
+                    color: Colors.black,
+                    size: 28,
+                  ),
+          ),
+          IconButton(
+            enableFeedback: false,
+            onPressed: () {
+              setState(() {
+                pageIndex = 1;
+              });
+            },
+            icon: pageIndex == 1
+                ? const Icon(
+                    Icons.person,
+                    color: Colors.black,
+                    size: 28,
+                  )
+                : const Icon(
+                    Icons.person_outline,
+                    color: Colors.black,
+                    size: 28,
+                  ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+
+
+
+
+Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => OtpScreen(
+                            //mobileNumber: phoneNumberController.toString(),
+                            ),
+                      ),
+                    );
