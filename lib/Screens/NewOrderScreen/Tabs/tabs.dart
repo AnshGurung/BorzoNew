@@ -9,7 +9,7 @@ class Tabs extends StatefulWidget {
   @override
   State<Tabs> createState() => _TabsState();
 }
-
+//tabs
 class _TabsState extends State<Tabs> {
   bool isDeliverNowClicked = true;
   bool isScheduleClicked = false;
